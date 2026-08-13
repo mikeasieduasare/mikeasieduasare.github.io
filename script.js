@@ -1,14 +1,5 @@
-```javascript id="f6m2pk"
+javascript id="f6m2pk"
 // =========================
-// MOBILE / NAVIGATION
-// =========================
-
-// Close mobile navigation when a navigation link is clicked.
-document.querySelectorAll(".nav-links a").forEach((link) => {
-    link.addEventListener("click", () => {
-        document.body.classList.remove("nav-open");
-    });
-});
 
 
 // =========================
@@ -68,4 +59,3 @@ revealElements.forEach((element) => {
     element.classList.add("reveal");
     observer.observe(element);
 });
-```
