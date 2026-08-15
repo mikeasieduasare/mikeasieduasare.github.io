@@ -199,6 +199,44 @@ button {
     display: none;
 }
 
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+
+    border-top: 1px solid var(--border);
+    background: var(--background);
+}
+
+.mobile-menu a {
+    padding: 17px 24px;
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 14px;
+    color: var(--muted);
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.mobile-menu a:hover {
+    color: var(--accent);
+    background: var(--surface-blue);
+}
+
+.site-header.menu-open .mobile-menu {
+    display: flex;
+}
+
+.site-header.menu-open .menu-toggle span:first-child {
+    transform: translateY(3px) rotate(45deg);
+}
+
+.site-header.menu-open .menu-toggle span:last-child {
+    transform: translateY(-3px) rotate(-45deg);
+}
+
 
 /* =========================
    HERO
