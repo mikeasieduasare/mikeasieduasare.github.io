@@ -1,12 +1,38 @@
-javascript id="f6m2pk"
 // =========================
+// MOBILE NAVIGATION
+// =========================
+
+const header = document.querySelector(".site-header");
+const menuToggle = document.querySelector(".menu-toggle");
+const mobileMenuLinks = document.querySelectorAll(".mobile-menu a");
+
+if (menuToggle && header) {
+    menuToggle.addEventListener("click", () => {
+        const isOpen = header.classList.toggle("menu-open");
+
+        menuToggle.setAttribute("aria-expanded", isOpen);
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+    });
+}
+
+mobileMenuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        if (!header || !menuToggle) return;
+
+        header.classList.remove("menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+    });
+});
 
 
 // =========================
 // CURRENT YEAR
 // =========================
 
-// Keep the footer year automatically up to date.
 const yearElement = document.querySelector(".site-footer p");
 
 if (yearElement) {
@@ -16,11 +42,8 @@ if (yearElement) {
 
 
 // =========================
-// SUBTLE SCROLL EFFECT
+// HEADER SCROLL STATE
 // =========================
-
-// Add a small shadow to the navigation when scrolling.
-const header = document.querySelector(".site-header");
 
 window.addEventListener("scroll", () => {
     if (!header) return;
