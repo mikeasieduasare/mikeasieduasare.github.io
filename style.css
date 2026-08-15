@@ -904,6 +904,9 @@ button {
     }
 }
 
+.mobile-menu {
+    display: none;
+}
 
 @media (max-width: 500px) {
 
