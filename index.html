@@ -2,191 +2,281 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>Michael Asiedu Asare</title>
+    <title>Michael Asiedu Asare — AI Safety Researcher & Builder</title>
 
-    <meta name="description"
-          content="Michael Asiedu Asare — AI Safety Researcher, AI Product Builder, and Entrepreneur.">
+    <meta
+        name="description"
+        content="Michael Asiedu Asare is an AI safety researcher, engineer, and builder working on reliable, secure, and safely deployable intelligent systems."
+    >
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
     <header class="site-header">
-    <nav class="nav-container">
 
-        <a href="index.html" class="brand">
-            Michael Asiedu Asare
-        </a>
+        <nav class="nav-container">
 
-        <div class="nav-links">
+            <a href="#home" class="brand">
+                Michael Asiedu Asare
+            </a>
+
+            <div class="nav-links">
+
+                <a href="#research">Research</a>
+                <a href="#projects">Projects</a>
+                <a href="#publications">Publications</a>
+                <a href="#writing">Writing</a>
+                <a href="#about">About</a>
+                <a href="cv.html">CV</a>
+
+            </div>
+
+            <div class="nav-actions">
+
+                <button
+                    class="theme-toggle"
+                    id="theme-toggle"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                >
+                    ◐
+                </button>
+
+                <button
+                    class="menu-toggle"
+                    id="menu-toggle"
+                    type="button"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </nav>
+
+        <div class="mobile-menu" id="mobile-menu">
+
             <a href="#research">Research</a>
             <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
             <a href="#writing">Writing</a>
             <a href="#about">About</a>
+            <a href="cv.html">CV</a>
             <a href="#contact">Contact</a>
-            <a
-                href="https://github.com/mikeasieduasare"
-                class="nav-external"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                GitHub ↗
-            </a>
+
         </div>
 
-        <button
-            class="menu-toggle"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-        >
-            <span></span>
-            <span></span>
-        </button>
-
-    </nav>
-
-    <div class="mobile-menu" id="mobile-menu">
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
-        <a href="#writing">Writing</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a
-            href="https://github.com/mikeasieduasare"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            GitHub ↗
-        </a>
-    </div>
-</header>
+    </header>
 
 
-    <main>
+    <main id="home">
 
-        <!-- Hero -->
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
         <section class="hero">
 
-    <div class="hero-content">
+            <div class="hero-content">
 
-        <p class="eyebrow">AI SAFETY · RESEARCH · BUILDING</p>
+                <p class="eyebrow">
+                    AI SAFETY · RESEARCH · BUILDING
+                </p>
 
-        <h1>
-            Building AI systems<br>
-            we can trust.
-        </h1>
+                <h1>
+                    Building AI systems
+                    <span>we can trust.</span>
+                </h1>
 
-        <p class="hero-description">
-            I am an AI safety researcher and product builder working
-            on the reliability, security, and safe deployment of
-            intelligent systems.
-        </p>
+                <p class="hero-description">
+                    I research how intelligent systems can detect
+                    when they are becoming unreliable, communicate
+                    uncertainty, and fail safely when conditions
+                    exceed what they can confidently handle.
+                </p>
 
-        <div class="hero-links">
-            <a href="#research" class="button primary">
-                Explore my work
-            </a>
+                <div class="hero-links">
 
-            <a href="mailto:mikeasieduasare@gmail.com" class="button secondary">
-                Get in touch
-            </a>
-        </div>
+                    <a
+                        href="#research"
+                        class="button primary"
+                    >
+                        Explore my research
+                    </a>
 
-    </div>
+                    <a
+                        href="#publications"
+                        class="button secondary"
+                    >
+                        View publications
+                    </a>
 
-    <div class="hero-visual" aria-label="Illustration of an AI system moving from a stable state toward uncertainty, triggering an early warning before entering an unsafe region.">
+                </div>
 
-    <div class="visual-grid"></div>
-
-    <div class="safe-zone">
-        <span>SAFE OPERATING REGION</span>
-    </div>
-
-    <div class="trajectory"></div>
-
-    <div class="warning-point">
-        <span class="warning-pulse"></span>
-        <span class="warning-label">EARLY WARNING</span>
-    </div>
-
-    <div class="state-label stable-label">
-        STABLE
-    </div>
-
-    <div class="state-label unstable-label">
-        UNSAFE
-    </div>
-
-    <div class="visual-footer">
-        <span>SYSTEM STATE</span>
-        <span>MONITORING</span>
-    </div>
-
-</div>
-
-</section>
+            </div>
 
 
-        <!-- Research -->
-        <section id="research" class="section">
+            <!-- AI SAFETY VISUAL -->
+
+            <div
+                class="safety-visual"
+                id="safety-visual"
+                aria-label="Interactive visualization of an AI system moving through a safe operating region toward an early warning boundary."
+            >
+
+                <div class="visual-header">
+                    <span>AI SYSTEM</span>
+                    <span id="system-status">STABLE</span>
+                </div>
+
+                <div class="visual-field">
+
+                    <div class="safe-region">
+                        <span>SAFE OPERATING REGION</span>
+                    </div>
+
+                    <div class="trajectory">
+
+                        <span class="trajectory-point point-1"></span>
+                        <span class="trajectory-point point-2"></span>
+                        <span class="trajectory-point point-3"></span>
+                        <span class="trajectory-point point-4"></span>
+
+                    </div>
+
+                    <div class="warning-boundary"></div>
+
+                    <div class="system-point">
+                        <span class="pulse"></span>
+                    </div>
+
+                    <div class="warning-indicator">
+                        <span class="warning-line"></span>
+                        <span>EARLY WARNING</span>
+                    </div>
+
+                </div>
+
+                <div class="visual-footer">
+
+                    <span>UNCERTAINTY</span>
+                    <span id="uncertainty-value">LOW</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RESEARCH
+        ========================== -->
+
+        <section class="section" id="research">
 
             <div class="section-heading">
+
                 <span class="section-number">01</span>
+
                 <h2>Research</h2>
+
             </div>
 
+
             <div class="section-intro">
+
                 <p>
-                    My research focuses on technical AI safety:
-                    understanding how intelligent systems can remain
-                    reliable, secure, and safe as they become more capable
-                    and are deployed in consequential environments.
+                    My work focuses on the technical foundations
+                    required to make AI systems reliable enough
+                    to operate in environments where failure matters.
                 </p>
+
             </div>
+
 
             <div class="research-grid">
 
                 <article class="research-card">
+
                     <span>01</span>
-                    <h3>Robustness & Reliability</h3>
+
+                    <h3>
+                        Robustness &amp; Reliability
+                    </h3>
+
                     <p>
-                        Developing methods for detecting, characterizing,
-                        and mitigating failures in neural systems.
+                        Understanding how intelligent systems behave
+                        under distribution shift, perturbation,
+                        uncertainty, and changing operating conditions.
                     </p>
+
                 </article>
 
+
                 <article class="research-card">
+
                     <span>02</span>
-                    <h3>Verification & Formal Methods</h3>
+
+                    <h3>
+                        Verification &amp; Formal Methods
+                    </h3>
+
                     <p>
-                        Exploring ways to provide stronger guarantees about
-                        the behavior of intelligent systems.
+                        Developing methods for reasoning about system
+                        behavior, failure modes, and guarantees before
+                        deployment.
                     </p>
+
                 </article>
 
+
                 <article class="research-card">
+
                     <span>03</span>
-                    <h3>Interpretability & Alignment</h3>
+
+                    <h3>
+                        Interpretability &amp; Alignment
+                    </h3>
+
                     <p>
-                        Studying how we can understand model behavior and
-                        align increasingly capable systems with intended
-                        objectives.
+                        Investigating how internal representations and
+                        model behavior can provide evidence about what
+                        systems are doing and why.
                     </p>
+
                 </article>
 
+
                 <article class="research-card">
+
                     <span>04</span>
-                    <h3>Safe Deployment</h3>
+
+                    <h3>
+                        Safe Deployment
+                    </h3>
+
                     <p>
-                        Designing evaluation and monitoring approaches that
-                        help AI systems recognize uncertainty and fail safely
-                        in real-world settings.
+                        Designing systems that monitor their own
+                        operating conditions and respond appropriately
+                        when confidence or reliability degrades.
                     </p>
+
                 </article>
 
             </div>
@@ -194,20 +284,31 @@
         </section>
 
 
-        <!-- Projects -->
-        <section id="projects" class="section section-alt">
+        <!-- =========================
+             PROJECTS
+        ========================== -->
+
+        <section class="section section-alt" id="projects">
 
             <div class="section-heading">
+
                 <span class="section-number">02</span>
+
                 <h2>Selected Work</h2>
+
             </div>
+
 
             <div class="projects-list">
 
+
                 <article class="project">
+
                     <div class="project-meta">
-                        <span>RESEARCH</span>
+
+                        <span>AI SAFETY</span>
                         <span>2026</span>
+
                     </div>
 
                     <h3>
@@ -215,20 +316,25 @@
                     </h3>
 
                     <p>
-                        Investigating whether neural systems can emit useful
-                        signals before entering unreliable or unsafe states.
+                        Investigating whether changes in neural
+                        representations can provide early signals
+                        of model instability and unreliable behavior.
                     </p>
 
                     <a href="#" class="text-link">
                         View project →
                     </a>
+
                 </article>
 
 
                 <article class="project">
+
                     <div class="project-meta">
-                        <span>AI SAFETY</span>
+
+                        <span>RESPONSIBLE AI</span>
                         <span>2026</span>
+
                     </div>
 
                     <h3>
@@ -236,34 +342,156 @@
                     </h3>
 
                     <p>
-                        An open evaluation protocol for testing the safety
-                        of AI health assistants in Twi and Ghanaian English.
+                        An evaluation protocol for testing the safety
+                        of AI health assistants in Twi and Ghanaian
+                        English.
                     </p>
 
                     <a href="#" class="text-link">
                         View project →
                     </a>
+
                 </article>
 
 
                 <article class="project">
+
                     <div class="project-meta">
-                        <span>RESEARCH</span>
+
+                        <span>MACHINE LEARNING</span>
                         <span>2026</span>
+
+                    </div>
+
+                    <h3>
+                        Resilient Multimodal Diagnosis
+                    </h3>
+
+                    <p>
+                        Research into robust multimodal learning and
+                        optimal transport methods for medical diagnosis
+                        under constrained deployment conditions.
+                    </p>
+
+                    <a href="#publications" class="text-link">
+                        Related publication →
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BUILDING
+        ========================== -->
+
+        <section class="section" id="building">
+
+            <div class="section-heading">
+
+                <span class="section-number">03</span>
+
+                <h2>Building</h2>
+
+            </div>
+
+
+            <div class="building-content">
+
+                <p class="large-text">
+                    I am interested in what happens when research
+                    leaves the laboratory.
+                </p>
+
+                <p>
+                    I build products, infrastructure, and experimental
+                    systems at the intersection of AI, safety, and
+                    real-world deployment.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PUBLICATIONS
+        ========================== -->
+
+        <section class="section section-alt" id="publications">
+
+            <div class="section-heading">
+
+                <span class="section-number">04</span>
+
+                <h2>Publications</h2>
+
+            </div>
+
+
+            <div class="publication-list">
+
+                <article class="publication">
+
+                    <div class="publication-status">
+                        PUBLISHED · 2026
                     </div>
 
                     <h3>
                         Resilient Sinkhorn-based Optimal Transport
+                        Late Fusion Framework for Breast Cancer Diagnosis
                     </h3>
 
-                    <p>
-                        A multimodal late-fusion framework developed for
-                        robust breast cancer diagnosis.
+                    <p class="publication-authors">
+                        Michael Asiedu Asare · Isaac Acquah ·
+                        Benjamin A. Yeboah · Emmanuel Owusu
                     </p>
 
-                    <a href="#" class="text-link">
-                        Read paper →
-                    </a>
+                    <p class="publication-venue">
+                        Cancer Informatics
+                    </p>
+
+                    <div class="publication-links">
+
+                        <a href="#" class="text-link">
+                            Paper →
+                        </a>
+
+                        <a href="#" class="text-link">
+                            DOI →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="publication">
+
+                    <div class="publication-status">
+                        UNDER REVIEW
+                    </div>
+
+                    <h3>
+                        Selected Research Manuscript
+                    </h3>
+
+                    <p class="publication-authors">
+                        Michael Asiedu Asare et al.
+                    </p>
+
+                    <div class="publication-links">
+
+                        <a href="#" class="text-link">
+                            Manuscript →
+                        </a>
+
+                    </div>
+
                 </article>
 
             </div>
@@ -271,47 +499,27 @@
         </section>
 
 
-        <!-- Building -->
-        <section class="section">
+        <!-- =========================
+             WRITING
+        ========================== -->
+
+        <section class="section" id="writing">
 
             <div class="section-heading">
-                <span class="section-number">03</span>
-                <h2>Building</h2>
-            </div>
 
-            <div class="building-content">
+                <span class="section-number">05</span>
 
-                <p class="large-text">
-                    I am interested in what happens when research leaves
-                    the laboratory.
-                </p>
-
-                <p>
-                    Alongside research, I explore how technical ideas can
-                    become products, infrastructure, and companies. My
-                    long-term goal is to build systems that translate
-                    advances in AI into useful and responsible technology.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- Writing -->
-        <section id="writing" class="section section-alt">
-
-            <div class="section-heading">
-                <span class="section-number">04</span>
                 <h2>Writing</h2>
+
             </div>
+
 
             <div class="writing-content">
 
-                <p>
-                    I write about AI, technology, philosophy, scientific
-                    discovery, institutions, and the ideas shaping the
-                    future.
+                <p class="large-text">
+                    I write about AI, technology, philosophy,
+                    scientific discovery, institutions, and the
+                    ideas shaping the future.
                 </p>
 
                 <a href="#" class="text-link">
@@ -323,13 +531,20 @@
         </section>
 
 
-        <!-- About -->
-        <section id="about" class="section">
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section class="section section-alt" id="about">
 
             <div class="section-heading">
-                <span class="section-number">05</span>
+
+                <span class="section-number">06</span>
+
                 <h2>About</h2>
+
             </div>
+
 
             <div class="about-content">
 
@@ -339,19 +554,20 @@
                 </p>
 
                 <p>
-                    I studied Biomedical Engineering at KNUST and began my
-                    research career working at the intersection of machine
-                    learning, healthcare, and intelligent systems.
+                    My work sits at the intersection of machine learning,
+                    AI safety, reliability, and real-world deployment.
+                    I am particularly interested in systems that can
+                    recognize their own limitations and fail safely.
                 </p>
 
                 <p>
-                    My work has increasingly moved toward a broader question:
-                    how do we build AI systems that remain reliable,
-                    understandable, and safe as their capabilities grow?
+                    My background spans biomedical engineering,
+                    machine learning research, AI product development,
+                    and responsible AI.
                 </p>
 
-                <a href="#" class="text-link">
-                    More about me →
+                <a href="cv.html" class="text-link">
+                    View full CV →
                 </a>
 
             </div>
@@ -359,27 +575,32 @@
         </section>
 
 
-        <!-- Contact -->
-        <section id="contact" class="section contact-section">
+        <!-- =========================
+             CONTACT
+        ========================== -->
 
-            <div class="section-heading">
-                <span class="section-number">06</span>
-                <h2>Contact</h2>
-            </div>
+        <section class="section contact-section" id="contact">
 
             <div class="contact-content">
 
+                <p class="eyebrow">
+                    CONTACT
+                </p>
+
                 <h2>
-                    Let's build something meaningful.
+                    Let's build something
+                    meaningful.
                 </h2>
 
                 <p>
-                    I'm interested in research collaborations,
-                    technical projects, and conversations about AI safety,
-                    technology, and entrepreneurship.
+                    For research collaborations, speaking,
+                    consulting, or interesting problems.
                 </p>
 
-                <a href="mailto:mikeasieduasare@gmail.com" class="email-link">
+                <a
+                    href="mailto:mikeasieduasare@gmail.com"
+                    class="email-link"
+                >
                     mikeasieduasare@gmail.com
                 </a>
 
@@ -390,7 +611,10 @@
     </main>
 
 
-    <!-- Footer -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer class="site-footer">
 
         <div class="footer-content">
@@ -401,14 +625,20 @@
 
             <div class="footer-links">
 
-                <a href="https://github.com/mikeasieduasare"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a
+                    href="https://github.com/mikeasieduasare"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     GitHub
                 </a>
 
                 <a href="mailto:mikeasieduasare@gmail.com">
                     Email
+                </a>
+
+                <a href="cv.html">
+                    CV
                 </a>
 
             </div>
@@ -422,4 +652,3 @@
 
 </body>
 </html>
-
