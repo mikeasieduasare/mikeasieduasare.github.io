@@ -72,6 +72,15 @@ button {
     min-height: 0;
 }
 
+section {
+    position: relative;
+    height: auto;
+    min-height: 0;
+}
+
+section + section {
+    clear: both;
+}
 
 /* =========================
    NAVIGATION
@@ -661,15 +670,6 @@ button {
     color: var(--muted);
 }
 
-section {
-    position: relative;
-    height: auto;
-    min-height: 0;
-}
-
-section + section {
-    clear: both;
-}
 
 /* =========================
    RESEARCH
