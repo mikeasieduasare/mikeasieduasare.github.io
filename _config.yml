@@ -2,5 +2,4 @@
 # static HTML and is copied through unchanged; this file only keeps
 # repository documentation out of the published site.
 exclude:
-  - docs/
   - README.md

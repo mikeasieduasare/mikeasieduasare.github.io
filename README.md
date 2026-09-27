@@ -3,17 +3,15 @@
 Personal research website of Michael Asiedu Asare, AI safety researcher,
 engineer, and builder. Live at <https://mikeasieduasare.github.io>.
 
-The product specification lives in [`docs/`](docs/). Read `docs/CLAUDE.txt`
-first; it is the source of truth for identity, design, structure, and content
-rules.
+The product specification (`docs/`) is kept locally by the owner and is not
+part of this repository; `.gitignore` prevents it from being committed.
 
 ## Stack
 
 Static HTML, one stylesheet, one script. No framework, no build step, no
 dependencies. GitHub Pages serves the repository root of `main` directly.
 Pages runs its default Jekyll pass, which copies the HTML through unchanged;
-`_config.yml` only excludes `docs/` and `README.md` from the published site.
-They remain readable in the repository itself, which is public.
+`_config.yml` only excludes `README.md` from the published site.
 
 ```
 index.html          Home (hero, research, selected work, building, publications,
@@ -26,14 +24,13 @@ essays/             One page per essay (relative URLs use ../)
 about.html          Biography and trajectory
 cv.html             Web CV with PDF download
 404.html            Not-found page (uses root-absolute URLs; see below)
-_config.yml         Keeps docs/ and this README out of the published site
+_config.yml         Keeps this README out of the published site
 style.css           All styles
 script.js           Theme toggle, mobile navigation, hero figure
 assets/fonts/       Space Grotesk (variable, Latin subset) + OFL licence
 assets/icons/       favicon.svg
 assets/documents/   Downloadable documents (CV PDF)
 assets/images/      Images (none yet)
-docs/               Specification
 ```
 
 ## Preview locally
