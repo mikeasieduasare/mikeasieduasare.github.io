@@ -11,6 +11,9 @@ rules.
 
 Static HTML, one stylesheet, one script. No framework, no build step, no
 dependencies. GitHub Pages serves the repository root of `main` directly.
+Pages runs its default Jekyll pass, which copies the HTML through unchanged;
+`_config.yml` only excludes `docs/` and `README.md` from the published site.
+They remain readable in the repository itself, which is public.
 
 ```
 index.html          Home (hero, research, selected work, building, publications,
@@ -23,6 +26,7 @@ essays/             One page per essay (relative URLs use ../)
 about.html          Biography and trajectory
 cv.html             Web CV with PDF download
 404.html            Not-found page (uses root-absolute URLs; see below)
+_config.yml         Keeps docs/ and this README out of the published site
 style.css           All styles
 script.js           Theme toggle, mobile navigation, hero figure
 assets/fonts/       Space Grotesk (variable, Latin subset) + OFL licence
