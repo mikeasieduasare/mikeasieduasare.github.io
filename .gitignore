@@ -1,0 +1,17 @@
+# Source material kept locally, never published.
+# Anything that should be public is copied explicitly into assets/.
+/Published Papers/
+/CV/
+/Drafts/
+/G-MASS Open Source Links.txt
+/instructions for Claude Code.txt
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Local tooling
+.claude/
